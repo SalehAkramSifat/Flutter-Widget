@@ -27,7 +27,11 @@ class HomeActivity extends StatelessWidget{
         TextField(decoration: InputDecoration(labelText: "Enter Your Name", border: OutlineInputBorder(),prefixIcon: Icon(Icons.person),),),
         SizedBox(height: 20),
 
-        ElevatedButton(onPressed:(){print("ElevatedButton Clicked");}, style: ElevatedButton.styleFrom(backgroundColor: Colors.blueAccent, padding: EdgeInsets.symmetric(vertical: 20), shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5),),), child:Text("Submit", style: TextStyle(fontSize: 15),) )
+        ElevatedButton(onPressed:(){print("ElevatedButton Clicked");}, style: ElevatedButton.styleFrom(backgroundColor: Colors.blueAccent, padding: EdgeInsets.symmetric(vertical: 20), shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5),),), child:Text("Submit", style: TextStyle(fontSize: 15, color: Colors.white),), ), SizedBox(height: 20),
+
+        TextButton(onPressed:(){print('You Clicked OutLine Button');}, child:Text("Click Me", style: TextStyle(fontSize: 10, color: Colors.blueAccent), ), ), SizedBox(height: 10),
+
+        OutlinedButton(onPressed:(){}, style: OutlinedButton.styleFrom(padding: EdgeInsets.symmetric(vertical: 20), side: BorderSide(color: Colors.blueAccent), shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10),),), child: Text("Outline Button", style: TextStyle(fontSize: 16, color: Colors.blueAccent),),)
       ],),),
     );
   }}
