@@ -24,6 +24,7 @@ class HomeActivity extends StatefulWidget {
 class _HomeActivityState extends State<HomeActivity> {
   bool isChecked = false;
   bool isSwitched = false;
+  String selectGender = "Male";
 
   @override
   Widget build(BuildContext context) {
@@ -62,8 +63,16 @@ class _HomeActivityState extends State<HomeActivity> {
             Row(children: [Text('Dark Mode:'), Switch(value: isSwitched, onChanged: (value) {setState(() {isSwitched = value;});},),]),
 
         SizedBox(height: 10,),
-        Center(child: CircularProgressIndicator(color: Colors.red,),)
+        Center(child: CircularProgressIndicator(color: Colors.red,),),
 
+        SizedBox(height: 10,),
+        Row(children: [Text("Gender"), SizedBox(width: 10),
+            Radio(value: "Male", groupValue: selectGender, onChanged: (value) {setState(() {selectGender = value.toString();});},),
+
+          Text("Male"),
+            Radio(value: "Female", groupValue: selectGender, onChanged: (value) {setState(() {selectGender = value.toString();});},),
+            Text("Female"),
+          ],)
 
         //Next 5️⃣ Radio Button, 7️⃣ Slider
 
