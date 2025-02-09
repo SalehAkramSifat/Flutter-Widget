@@ -77,9 +77,9 @@ class _HomeActivityState extends State<HomeActivity> {
 
         SizedBox(height: 10,),
         Column(crossAxisAlignment: CrossAxisAlignment.start, children: [Text("Volume: ${sliderValue.toInt()}"),
-        Slider(value: sliderValue, min: 0,max: 100,divisions: 10,label: sliderValue.toInt().toString(), onChanged: (value){setState(() {
+        Slider(value: sliderValue, min: 0,max: 100,divisions: 100,label: sliderValue.toInt().toString(), onChanged: (value){setState(() {
           sliderValue = value;
-        });)],)
+        });})],)
 
       ],
         ),
