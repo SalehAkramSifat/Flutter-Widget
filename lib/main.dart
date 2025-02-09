@@ -74,9 +74,6 @@ class _HomeActivityState extends State<HomeActivity> {
             Text("Female"),
           ],)
 
-        //Next 5️⃣ Radio Button, 7️⃣ Slider
-
-
       ],
         ),
       ),
