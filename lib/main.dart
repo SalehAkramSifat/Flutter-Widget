@@ -25,6 +25,7 @@ class _HomeActivityState extends State<HomeActivity> {
   bool isChecked = false;
   bool isSwitched = false;
   String selectGender = "Male";
+  double sliderValue = 50;
 
   @override
   Widget build(BuildContext context) {
@@ -72,7 +73,13 @@ class _HomeActivityState extends State<HomeActivity> {
           Text("Male"),
             Radio(value: "Female", groupValue: selectGender, onChanged: (value) {setState(() {selectGender = value.toString();});},),
             Text("Female"),
-          ],)
+          ],),
+
+        SizedBox(height: 10,),
+        Column(crossAxisAlignment: CrossAxisAlignment.start, children: [Text("Volume: ${sliderValue.toInt()}"),
+        Slider(value: sliderValue, min: 0,max: 100,divisions: 10,label: sliderValue.toInt().toString(), onChanged: (value){setState(() {
+          sliderValue = value;
+        });)],)
 
       ],
         ),
