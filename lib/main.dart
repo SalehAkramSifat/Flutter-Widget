@@ -80,9 +80,8 @@ class _HomeActivityState extends State<HomeActivity> {
         Slider(value: sliderValue, min: 0,max: 100,divisions: 100,label: sliderValue.toInt().toString(), onChanged: (value){setState(() {
           sliderValue = value;
         });})],)
-
       ],
-        ),
+      ),
       ),
     );
   }
